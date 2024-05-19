@@ -1,32 +1,30 @@
-struct Rectangle{
-    width:u32,
-    height:u32,
+struct Circle{
+    radius:f32, 
 }
 
 
-impl Rectangle{
+impl Circle{
 
-    fn new(width:u32,height:u32)->Rectangle{
-        Rectangle{
-            width,
-            height,
+    fn new(radius:f32)->Circle{
+        Circle{
+            radius,
         }
     }
 
 
-    fn area(&self)->u32{
-        self.width*self.height
+    fn area(&self)->f32{
+        self.radius * self.radius * 3.14159
     }
 
-    fn perimeter(&self) -> u32 {
-        2 * (self.width + self.height)
+    fn perimeter(&self) -> f32 {
+        2.0 * self.radius * 3.14159
     }
 }
 
 
 fn main() {
-    let rect = Rectangle::new(30,50);
+    let rect = Circle::new(30.0);
 
-    println!("Area of rectangle is {}",rect.area());
+    println!("Area of Circle is {}",rect.area());
 }
 
