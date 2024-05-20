@@ -26,5 +26,6 @@ fn main() {
     let rect = Circle::new(30.0);
 
     println!("Area of Circle is {}",rect.area());
+    println!("Perimeter of Circle is {}",rect.perimeter());
 }
 
